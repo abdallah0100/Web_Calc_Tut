@@ -9,14 +9,53 @@
 
     <style>
         #calculator{
-            width: 400px;
-            height: 400px;
-            background-color: cadetblue;
+            width: 270px;
+            height: 250px;
+            background-color: black;
             border-radius: 10px;
             border: 2px solid black;
+            padding: 0px 2px 0px 10px;
+        }
+        div{
+            float: left;
         }
         #inputField{
-            width: 350px;
+            width: 250px;
+            height: 25px;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+        .btn{
+            width: 55px;
+            height: 28px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid black;
+            position: relative;
+            margin: 5px 0px 5px 6px;
+        }
+        .btn:hover{
+            cursor: pointer;
+        }
+        label{
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -40%);  /* Center the label */
+            position: absolute;
+            color: white;
+        }
+        .operationBtn{
+            background-color: blue;
+        }
+        .digitBtn{
+            background-color: white;
+        }
+        .digitBtn label{
+            color: black;
+        }
+
+        #numbers{
+            width: 188px;
         }
     </style>
 </head>
@@ -26,6 +65,60 @@
 
     <div id="calculator">
         <input type="text" id="inputField">
+        <div class="btn" style="background-color: red;">
+            <label>C</label>
+        </div>
+        <div class="btn operationBtn">
+            <label>/</label>
+        </div>
+        <div class="btn operationBtn">
+            <label>*</label>
+        </div>
+        <div class="btn operationBtn">
+            <label>-</label>
+        </div>
+        <div id="numbers">
+            <div class="btn digitBtn">
+                <label>7</label>
+            </div>
+            <div class="btn digitBtn">
+                <label>8</label>
+            </div>
+            <div class="btn digitBtn">
+                <label>9</label>
+            </div>
+            <div class="btn digitBtn">
+                <label>4</label>
+            </div>
+            <div class="btn digitBtn">
+                <label>5</label>
+            </div>
+            <div class="btn digitBtn">
+                <label>6</label>
+            </div>
+            <div class="btn digitBtn">
+                <label>1</label>
+            </div>
+            <div class="btn digitBtn">
+                <label>2</label>
+            </div>
+            <div class="btn digitBtn">
+                <label>3</label>
+            </div>
+            <div class="btn digitBtn">
+                <label>0</label>
+            </div>
+            <div class="btn digitBtn">
+                <label>.</label>
+            </div>
+        </div>
+        <div class="btn operationBtn">
+            <label>+</label>
+        </div>
+        <div class="btn" style="background-color: green; padding-top: 82px;">
+            <label>=</label>
+        </div>
+
     </div>
 
     <!-- special scripts for integration in App Gallery - must be placed at the bottom of the HTML after your code -->
